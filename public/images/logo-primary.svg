@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" fill="none">
+  <!-- Logo for Trinklets in Primary Gold -->
+  <style>
+    .logo-text { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 48px; 
+      font-weight: 400;
+      fill: #D4A737;
+    }
+    .tagline-text {
+      font-family: 'Great Vibes', cursive;
+      font-size: 18px;
+      fill: #8B5A3C;
+    }
+  </style>
+  
+  <!-- Main text -->
+  <text x="10" y="50" class="logo-text">Trinklets</text>
+  
+  <!-- Tagline -->
+  <text x="12" y="70" class="tagline-text">simply yours.</text>
+  
+  <!-- Decorative leaf accent -->
+  <path d="M 270 25 Q 275 20, 280 25 Q 285 30, 280 35 Q 275 40, 270 35 Z" 
+        fill="#8B5A3C" opacity="0.6"/>
+</svg>

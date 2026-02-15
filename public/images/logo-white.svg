@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" fill="none">
+  <!-- Logo for Trinklets in White/Cream for dark backgrounds -->
+  <style>
+    .logo-text-white { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 48px; 
+      font-weight: 400;
+      fill: #F5F2E8;
+    }
+    .tagline-text-white {
+      font-family: 'Great Vibes', cursive;
+      font-size: 18px;
+      fill: #F5F2E8;
+    }
+  </style>
+  
+  <!-- Main text -->
+  <text x="10" y="50" class="logo-text-white">Trinklets</text>
+  
+  <!-- Tagline -->
+  <text x="12" y="70" class="tagline-text-white">simply yours.</text>
+  
+  <!-- Decorative leaf accent -->
+  <path d="M 270 25 Q 275 20, 280 25 Q 285 30, 280 35 Q 275 40, 270 35 Z" 
+        fill="#F5F2E8" opacity="0.8"/>
+</svg>
