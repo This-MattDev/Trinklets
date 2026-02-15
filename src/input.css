@@ -1,1 +1,93 @@
 @import "tailwindcss";
+
+/* ============================================
+   GOOGLE FONTS
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Instrument+Sans:wght@400;500;700&family=Great+Vibes&display=swap');
+
+/* ============================================
+   CUSTOM THEME (Tailwind v4 way)
+   ============================================ */
+@theme {
+  /* COLORS */
+  --color-walnut-brown: #8B5A3C;
+  --color-primary-gold: #D4A737;
+  --color-warm-cream: #F5F2E8;
+  --color-dark-walnut: #3A1914;
+  
+  /* FONTS */
+  --font-display: "Playfair Display", serif;
+  --font-body: "Instrument Sans", sans-serif;
+  --font-script: "Great Vibes", cursive;
+  
+  /* CUSTOM UTILITIES */
+  --shadow-card: 0 4px 20px rgba(62, 39, 35, 0.1);
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+@layer base {
+  body {
+    font-family: var(--font-body);
+    color: var(--color-dark-walnut);
+    background-color: var(--color-warm-cream);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+/* ============================================
+   CUSTOM COMPONENTS
+   ============================================ */
+@layer components {
+  .btn-primary {
+    background-color: var(--color-primary-gold);
+    color: var(--color-dark-walnut);
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    transition: all 0.3s;
+  }
+  
+  .btn-primary:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+  }
+  
+  .btn-secondary {
+    background-color: var(--color-walnut-brown);
+    color: var(--color-warm-cream);
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    transition: all 0.3s;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #6d4830;
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-card);
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid color-mix(in srgb, var(--color-walnut-brown) 30%, transparent);
+    border-radius: 0.5rem;
+    background-color: white;
+  }
+  
+  .input-field:focus {
+    outline: none;
+    border-color: var(--color-walnut-brown);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-walnut-brown) 20%, transparent);
+  }
+}
