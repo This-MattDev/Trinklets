@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,19 +7,20 @@
     <link href="../dist/output.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
-  <body class="bg-warm-cream text-dark-walnut font-body">
+  <body class="text-dark-walnut font-body overflow-x-hidden">
     <!-- ========== NAVBAR ========== -->
-    <nav class="bg-dark-walnut text-warm-cream">
-      <div
-        class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"
+    <div class="fixed top-0 left-0 right-0 z-9999 w-full px-6 pt-4 pb-2 mt-1">
+      <nav
+        class="shadow max-w-5xl mx-auto bg-white/95 backdrop-blur-md text-dark-walnut rounded-full shadow-lg px-8 py-3 flex items-center justify-between"
       >
         <!-- Logo -->
         <a href="#" class="font-script text-primary-gold text-2xl">Trinklets</a>
 
         <!-- Nav Links -->
         <ul
-          class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide uppercase"
+          class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide"
         >
           <li>
             <a href="#products" class="hover:text-primary-gold transition"
@@ -44,36 +45,23 @@
         </ul>
 
         <!-- Right Actions -->
-        <div class="flex items-center gap-5">
-          <!-- Search Icon -->
-          <button
-            class="hover:text-primary-gold transition"
-            aria-label="Search"
+        <div class="flex items-center gap-3">
+          <a
+            href="#"
+            class="text-sm font-medium hover:text-primary-gold transition px-4 py-2"
+            >Login</a
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-5 h-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z"
-              />
-            </svg>
-          </button>
-          <a href="#" class="btn-primary text-sm font-semibold"
+          <a
+            href="#"
+            class="bg-dark-walnut text-warm-cream text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-walnut-brown transition"
             >Start Customizing</a
           >
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
 
     <!-- ========== HERO SECTION ========== -->
-    <section class="relative h-[560px] md:h-[620px] overflow-hidden">
+    <section class="relative h-screen overflow-hidden">
       <!-- Background Image -->
       <img
         src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=1920&q=80"
@@ -88,11 +76,6 @@
         class="relative z-10 max-w-7xl mx-auto px-6 h-full flex flex-col items-center justify-center text-center"
       >
         <!-- Badge -->
-        <span
-          class="inline-block bg-primary-gold/90 text-dark-walnut text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6"
-        >
-          Handcrafted Artisanal Engravings
-        </span>
 
         <h1
           class="text-warm-cream font-display text-4xl md:text-6xl leading-tight mb-2"
@@ -124,7 +107,7 @@
     </section>
 
     <!-- ========== HANDCRAFTED COLLECTION ========== -->
-    <section id="products" class="py-20 bg-warm-cream">
+    <section id="products" class="py-20 bg-warm-cream" data-aos="zoom-in-left">
       <div class="max-w-7xl mx-auto px-6">
         <!-- Section Header -->
         <div class="text-center mb-14">
@@ -141,7 +124,7 @@
               <img
                 src="https://images.unsplash.com/photo-1614015004880-6492f0c5ce06?auto=format&fit=crop&w=600&q=80"
                 alt="Artisanal Keychains"
-                class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <span
                 class="absolute top-3 right-3 bg-dark-walnut text-warm-cream text-[10px] uppercase tracking-widest px-3 py-1 rounded-full"
@@ -163,7 +146,7 @@
             </div>
             <a
               href="#"
-              class="inline-flex items-center gap-1.5 mt-4 text-sm text-walnut-brown font-medium hover:text-primary-gold transition"
+              class="w-full inline-flex justify-center items-center gap-1.5 mt-4 text-sm font-semibold bg-primary-gold text-wallnut-brown px-5 py-2.5 rounded-lg hover:opacity-90 hover:scale-105 transition"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -189,7 +172,7 @@
               <img
                 src="https://images.unsplash.com/photo-1513519245088-0e12902e35ca?auto=format&fit=crop&w=600&q=80"
                 alt="Engraved Frames"
-                class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
             <div class="flex items-start justify-between">
@@ -205,7 +188,7 @@
             </div>
             <a
               href="#"
-              class="inline-flex items-center gap-1.5 mt-4 text-sm text-walnut-brown font-medium hover:text-primary-gold transition"
+              class="w-full inline-flex justify-center items-center gap-1.5 mt-4 text-sm font-semibold bg-primary-gold text-wallnut-brown px-5 py-2.5 rounded-lg hover:opacity-90 hover:scale-105 transition"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -227,11 +210,11 @@
 
           <!-- Product 3: Custom Coasters -->
           <div class="card group">
-            <div class="relative overflow-hidden rounded-lg mb-5">
+            <div class="relative overflow-hidden rounded-lg mb-5 ">
               <img
                 src="https://images.unsplash.com/photo-1605433247501-698725862cea?auto=format&fit=crop&w=600&q=80"
                 alt="Custom Coasters"
-                class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
             <div class="flex items-start justify-between">
@@ -247,7 +230,7 @@
             </div>
             <a
               href="#"
-              class="inline-flex items-center gap-1.5 mt-4 text-sm text-walnut-brown font-medium hover:text-primary-gold transition"
+              class="w-full inline-flex justify-center items-center gap-1.5 mt-4 text-sm font-semibold bg-primary-gold text-wallnut-brown px-5 py-2.5 rounded-lg hover:opacity-90 hover:scale-105 transition"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -680,5 +663,12 @@
         </div>
       </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      window.history.scrollRestoration = "manual";
+      window.scrollTo(0, 0);
+      AOS.init();
+    </script>
   </body>
 </html>
