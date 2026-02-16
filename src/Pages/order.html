@@ -7,6 +7,7 @@
     <link href="../../dist/output.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="../JS/order.js" defer></script>
   </head>
   <body class="text-dark-walnut font-body bg-warm-cream overflow-x-hidden">
     <!-- ========== HEADER ========== -->
@@ -178,13 +179,14 @@
                 <!-- Wood Keychain — Selected -->
                 <button
                   type="button"
-                  class="relative bg-white rounded-2xl border-2 border-primary-gold p-6 text-left transition shadow-sm hover:shadow-md cursor-pointer group"
+                  class="base-btn selected relative bg-white rounded-2xl p-6 text-left transition shadow-sm hover:shadow-md cursor-pointer group"
                   aria-pressed="true"
+                  id="keychain-btn"
                   aria-label="Wood Keychain, From ₱89, selected"
                 >
                   <!-- Checkmark Badge -->
                   <div
-                    class="absolute top-3 right-3 w-6 h-6 rounded-full bg-primary-gold flex items-center justify-center"
+                    class="checkmark absolute top-3 right-3 w-6 h-6 rounded-full bg-primary-gold flex items-center justify-center"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -225,12 +227,34 @@
                 </button>
 
                 <!-- Photo Frame -->
+
                 <button
                   type="button"
-                  class="relative bg-white rounded-2xl border-2 border-transparent p-6 text-left transition shadow-sm hover:shadow-md hover:border-primary-gold/40 cursor-pointer group"
+                  class="base-btn relative bg-white rounded-2xl border-2 border-transparent p-6 text-left transition shadow-sm hover:shadow-md hover:border-primary-gold/40 cursor-pointer group"
                   aria-pressed="false"
+                  id="frame-btn"
                   aria-label="Photo Frame, From ₱349"
                 >
+                  <!-- Checkmark Badge -->
+                  <div
+                    class="checkmark hidden-check absolute top-3 right-3 w-6 h-6 rounded-full bg-primary-gold flex items-center justify-center"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-3.5 h-3.5 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="3"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+
                   <div class="flex items-center justify-center h-36 mb-4">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -254,10 +278,30 @@
                 <!-- Engraved Mirror -->
                 <button
                   type="button"
-                  class="relative bg-white rounded-2xl border-2 border-transparent p-6 text-left transition shadow-sm hover:shadow-md hover:border-primary-gold/40 cursor-pointer group"
+                  class="base-btn relative bg-white rounded-2xl border-2 border-transparent p-6 text-left transition shadow-sm hover:shadow-md hover:border-primary-gold/40 cursor-pointer group"
                   aria-pressed="false"
+                  id="mirror-btn"
                   aria-label="Engraved Mirror, From ₱259"
                 >
+                  <!-- Checkmark Badge -->
+                  <div
+                    class="checkmark hidden-check absolute top-3 right-3 w-6 h-6 rounded-full bg-primary-gold flex items-center justify-center"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-3.5 h-3.5 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="3"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
                   <div class="flex items-center justify-center h-36 mb-4">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -318,6 +362,7 @@
                   type="button"
                   class="bg-white rounded-2xl border-2 border-transparent p-6 text-left transition shadow-sm hover:shadow-md hover:border-primary-gold/40 cursor-pointer"
                   aria-pressed="false"
+                  id="base-btn"
                   aria-label="Image Only, plus ₱45"
                 >
                   <div
@@ -532,9 +577,7 @@
                 class="bg-white rounded-2xl shadow-sm border border-walnut-brown/10 overflow-hidden"
               >
                 <!-- Header -->
-                <div
-                  class=" bg-white px-6 py-5 border-b border-walnut-brown/10"
-                >
+                <div class="bg-white px-6 py-5 border-b border-walnut-brown/10">
                   <h2 class="font-display text-xl font-bold italic">
                     Order Summary
                   </h2>
