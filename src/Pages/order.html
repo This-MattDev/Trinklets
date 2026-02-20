@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script src="../JS/order.js" defer></script>
+    <script src="../JS/drop-file.js" defer></script>
   </head>
   <body class="text-dark-walnut font-body bg-warm-cream overflow-x-hidden">
     <!-- ========== HEADER ========== -->
@@ -179,14 +180,14 @@
                 <!-- Wood Keychain — Selected -->
                 <button
                   type="button"
-                  class="base-btn selected relative bg-white rounded-2xl p-6 text-left transition shadow-sm hover:shadow-md cursor-pointer group"
+                  class="base-btn selected relative bg-white rounded-2xl border-2 border-transparent p-6 text-left transition shadow-sm hover:shadow-md hover:border-primary-gold/40 cursor-pointer group"
                   aria-pressed="true"
                   id="keychain-btn"
                   aria-label="Wood Keychain, From ₱89, selected"
                 >
                   <!-- Checkmark Badge -->
                   <div
-                    class="checkmark absolute top-3 right-3 w-6 h-6 rounded-full bg-primary-gold flex items-center justify-center"
+                    class="base-check absolute top-3 right-3 w-6 h-6 rounded-full bg-primary-gold flex items-center justify-center"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -237,7 +238,7 @@
                 >
                   <!-- Checkmark Badge -->
                   <div
-                    class="checkmark hidden-check absolute top-3 right-3 w-6 h-6 rounded-full bg-primary-gold flex items-center justify-center"
+                    class="base-check hidden-check absolute top-3 right-3 w-6 h-6 rounded-full bg-primary-gold flex items-center justify-center"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -285,7 +286,7 @@
                 >
                   <!-- Checkmark Badge -->
                   <div
-                    class="checkmark hidden-check absolute top-3 right-3 w-6 h-6 rounded-full bg-primary-gold flex items-center justify-center"
+                    class="base-check hidden-check absolute top-3 right-3 w-6 h-6 rounded-full bg-primary-gold flex items-center justify-center"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -341,10 +342,29 @@
                 <!-- Text Only — Selected -->
                 <button
                   type="button"
-                  class="bg-white rounded-2xl border-2 border-primary-gold p-6 text-left transition shadow-sm hover:shadow-md cursor-pointer"
+                  class="custom-btn selected relative bg-white rounded-2xl border-2 border-transparent p-6 text-left transition shadow-sm hover:shadow-md hover:border-primary-gold/40 cursor-pointer group"
                   aria-pressed="true"
                   aria-label="Text Only, plus ₱20, selected"
                 >
+                  <!-- Checkmark Badge -->
+                  <div
+                    class="custom-check absolute top-3 right-3 w-6 h-6 rounded-full bg-primary-gold flex items-center justify-center"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-3.5 h-3.5 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="3"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
                   <div
                     class="w-10 h-10 rounded-lg bg-primary-gold/15 flex items-center justify-center mb-4"
                   >
@@ -360,11 +380,29 @@
                 <!-- Image Only -->
                 <button
                   type="button"
-                  class="bg-white rounded-2xl border-2 border-transparent p-6 text-left transition shadow-sm hover:shadow-md hover:border-primary-gold/40 cursor-pointer"
+                  class="custom-btn relative bg-white rounded-2xl border-2 border-transparent p-6 text-left transition shadow-sm hover:shadow-md hover:border-primary-gold/40 cursor-pointer"
                   aria-pressed="false"
-                  id="base-btn"
                   aria-label="Image Only, plus ₱45"
                 >
+                  <!-- Checkmark Badge (hidden) -->
+                  <div
+                    class="custom-check hidden-check absolute top-3 right-3 w-6 h-6 rounded-full bg-primary-gold flex items-center justify-center"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-3.5 h-3.5 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="3"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
                   <div
                     class="w-10 h-10 rounded-lg bg-walnut-brown/8 flex items-center justify-center mb-4"
                   >
@@ -390,10 +428,29 @@
                 <!-- Image & Text -->
                 <button
                   type="button"
-                  class="bg-white rounded-2xl border-2 border-transparent p-6 text-left transition shadow-sm hover:shadow-md hover:border-primary-gold/40 cursor-pointer"
+                  class="custom-btn relative bg-white rounded-2xl border-2 border-transparent p-6 text-left transition shadow-sm hover:shadow-md hover:border-primary-gold/40 cursor-pointer"
                   aria-pressed="false"
                   aria-label="Image and Text, plus ₱65"
                 >
+                  <!-- Checkmark Badge (hidden) -->
+                  <div
+                    class="custom-check hidden-check absolute top-3 right-3 w-6 h-6 rounded-full bg-primary-gold flex items-center justify-center"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-3.5 h-3.5 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="3"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
                   <div
                     class="w-10 h-10 rounded-lg bg-walnut-brown/8 flex items-center justify-center mb-4"
                   >
@@ -491,7 +548,7 @@
                       <!-- Modern — Selected -->
                       <button
                         type="button"
-                        class="flex flex-col items-center gap-1.5 px-5 py-3 rounded-xl border-2 border-primary-gold bg-white cursor-pointer transition"
+                        class="font-btn selected flex flex-col items-center gap-1.5 px-5 py-3 rounded-xl border-2 border-transparent  bg-white cursor-pointer hover:border-primary-gold/40 curosr-pointer transition"
                         aria-pressed="true"
                         aria-label="Modern font, selected"
                       >
@@ -506,7 +563,7 @@
                       <!-- Classic -->
                       <button
                         type="button"
-                        class="flex flex-col items-center gap-1.5 px-5 py-3 rounded-xl border-2 border-transparent bg-white hover:border-primary-gold/40 cursor-pointer transition"
+                        class="font-btn flex flex-col items-center gap-1.5 px-5 py-3 rounded-xl border-2 border-transparent bg-white hover:border-primary-gold/40 cursor-pointer transition"
                         aria-pressed="false"
                         aria-label="Classic font"
                       >
@@ -521,7 +578,7 @@
                       <!-- Elegant -->
                       <button
                         type="button"
-                        class="flex flex-col items-center gap-1.5 px-5 py-3 rounded-xl border-2 border-transparent bg-white hover:border-primary-gold/40 cursor-pointer transition"
+                        class="font-btn flex flex-col items-center gap-1.5 px-5 py-3 rounded-xl border-2 border-transparent bg-white hover:border-primary-gold/40 cursor-pointer transition"
                         aria-pressed="false"
                         aria-label="Elegant font"
                       >

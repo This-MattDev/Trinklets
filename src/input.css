@@ -107,3 +107,15 @@
       color-mix(in srgb, var(--color-walnut-brown) 20%, transparent);
   }
 }
+
+.selected {
+  border: 2px solid var(--color-primary-gold);
+}
+
+.hidden-check {
+  display: none;
+}
+
+/* ============================================
+   UTILITY OVERRIDES
+   ============================================ */
